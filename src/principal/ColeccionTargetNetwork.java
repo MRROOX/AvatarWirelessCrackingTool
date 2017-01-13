@@ -1,6 +1,7 @@
 package principal;
 
 import avatarwirelesscrackingtool.Shell;
+import com.csvreader.CsvReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
