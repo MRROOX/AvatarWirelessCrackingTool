@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package avatar.wireless.testing;
+package avatarwirelesscrackingtool;
 
-import avatar.wireless.testing.principal.Configuracion;
-import avatar.wireless.testing.principal.Root;
+import principal.Configuracion;
+import principal.Root;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;

@@ -1,7 +1,7 @@
 
-package avatar.wireless.testing.principal;
+package principal;
 
-import avatar.wireless.testing.Shell;
+import avatarwirelesscrackingtool.Shell;
 import java.io.IOException;
 
 /**

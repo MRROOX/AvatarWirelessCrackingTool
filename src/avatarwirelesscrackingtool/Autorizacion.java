@@ -1,4 +1,4 @@
-package avatar.wireless.testing;
+package avatarwirelesscrackingtool;
 
 import javax.swing.JOptionPane;
 import java.io.*;

@@ -1,4 +1,4 @@
-package avatar.wireless.testing;
+package avatarwirelesscrackingtool;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

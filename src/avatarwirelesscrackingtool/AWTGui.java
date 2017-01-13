@@ -1,16 +1,16 @@
 package avatarwirelesscrackingtool;
 
-import avatar.wireless.testing.ataque.WEP;
-import avatar.wireless.testing.ataque.WPAWPA2;
-import avatar.wireless.testing.ataque.WPS;
-import avatar.wireless.testing.principal.MetNetworkInterface;
-import avatar.wireless.testing.principal.ColeccionTargetNetwork;
-import avatar.wireless.testing.principal.Configuracion;
-import avatar.wireless.testing.principal.MyNetworkInterfaces;
-import avatar.wireless.testing.principal.NetInterfaces;
-import avatar.wireless.testing.principal.VictimClient;
-import avatar.wireless.testing.principal.WpsTargetNetwork;
-import avatar.wireless.testing.principal.targetNetwork;
+import attack.WEP;
+import attack.WPAWPA2;
+import attack.WPS;
+import principal.MetNetworkInterface;
+import principal.ColeccionTargetNetwork;
+import principal.Configuracion;
+import principal.MyNetworkInterfaces;
+import principal.NetInterfaces;
+import principal.VictimClient;
+import principal.WpsTargetNetwork;
+import principal.targetNetwork;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;

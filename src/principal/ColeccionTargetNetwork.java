@@ -1,7 +1,6 @@
-package avatar.wireless.testing.principal;
+package principal;
 
-import avatar.wireless.testing.Shell;
-import com.csvreader.CsvReader; //Libreria para trabajar con archivos .csv
+import avatarwirelesscrackingtool.Shell;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;

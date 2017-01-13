@@ -1,8 +1,8 @@
-package avatar.wireless.testing.principal;
+package principal;
 
 import java.io.File;
 import java.io.IOException;
-import avatar.wireless.testing.*;
+import avatarwirelesscrackingtool.*;
 import java.io.BufferedWriter;
 
 public class Configuracion {

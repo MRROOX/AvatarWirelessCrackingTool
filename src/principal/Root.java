@@ -1,5 +1,5 @@
-package avatar.wireless.testing.principal;
-import avatar.wireless.testing.Shell;
+package principal;
+import avatarwirelesscrackingtool.Shell;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

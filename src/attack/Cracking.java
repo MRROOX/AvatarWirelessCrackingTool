@@ -1,6 +1,6 @@
-package avatar.wireless.testing.ataque;
+package attack;
 
-import avatar.wireless.testing.Shell;
+import avatarwirelesscrackingtool.Shell;
 import java.io.IOException;
 
 public class Cracking {

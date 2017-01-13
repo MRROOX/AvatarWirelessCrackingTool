@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package avatar.wireless.testing.principal;
+package principal;
 
-import avatar.wireless.testing.Shell;
+import avatarwirelesscrackingtool.Shell;
 import java.io.IOException;
 import java.util.ArrayList;
 

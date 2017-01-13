@@ -1,5 +1,5 @@
 
-package avatar.wireless.testing.principal;
+package principal;
 
 /**
  *
