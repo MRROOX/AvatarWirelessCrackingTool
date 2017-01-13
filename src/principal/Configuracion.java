@@ -41,7 +41,7 @@ public class Configuracion {
  
         boolean R = false;
         /*Array cmd[] con todo los comando necesarios para isntalar los programas requediso para el funcionamiento de katoolin*/
-        String cmd[] = new String[14];
+        String cmd[] = new String[1];
         if (verProg() == true) {
             R = false;
             //System.out.println("Todos los programas necesarios instalados");
@@ -95,10 +95,10 @@ public class Configuracion {
     public static void crearDir(String msj) throws IOException {
         /*para crear un directorio dentro de /home/usuario Para almacenar los archivos temporales*/
         //String homeUsuario = System.getProperty("user.home");//Obtenemos el Nombre del Usuario
-        String cmd = "/tmp/.AWTesting/AircrackTemporal";
+        String cmd = "/tmp/.AWCTool/AirTemp";
 // Direcotrio para archivos temporales de Airckar-ng
 //Ademas crearmos archivo temporal para almacenar las Network Interfaces
-        String cmd1 = "/tmp/.AWTesting/AdminData"; //Directorio para almacenar Datos de Administracion
+        String cmd1 = "/tmp/.AWCTool/AdminData"; //Directorio para almacenar Datos de Administracion
         File directorio1 = new File(cmd);
         File direcotiro2 = new File(cmd1);
         directorio1.mkdirs();

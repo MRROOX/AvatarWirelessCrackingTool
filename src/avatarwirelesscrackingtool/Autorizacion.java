@@ -177,24 +177,28 @@ public class Autorizacion extends javax.swing.JFrame {
     }
 
     private void OkTerminos() {
+
         String homeUsuario = System.getProperty("user.home");
-        String cmd = homeUsuario + "/.AWTestingresidual";
+        String sFichero = homeUsuario + "/.AWCTool/AWCrakingTool";
+
+        String cmd = homeUsuario + "/.AWCTool";
         File directorio1 = new File(cmd);
         directorio1.mkdirs();
-        File fichero = new File(homeUsuario + "/.AWTestingresidual/AvatarWirelessTestingEstuvoAqui");
+        File fichero = new File(homeUsuario + "/.AWCTool/AWCrakingTool");
         try {
             if (fichero.createNewFile()) {
-                //System.out.println("El fichero se ha creado correctamente");
+                System.out.println("El fichero se ha creado correctamente");
+                AuthRoot ARoot = new AuthRoot();
+                this.setVisible(false);
+                ARoot.setVisible(true); //Gui AuthRoot   
+
             } else {
-                //System.out.println("No ha podido ser creado el fichero");
+                System.out.println("No ha podido ser creado el fichero");
             }
         } catch (IOException ioe) {
             ioe.printStackTrace();
+            System.out.println("Error " + ioe);
         }
-        AuthRoot Auth = new AuthRoot();
-        this.setVisible(false);
-        Auth.setVisible(true); //Gui AuthRoot 
-       
 
     }
 

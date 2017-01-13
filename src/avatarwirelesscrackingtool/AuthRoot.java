@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package avatarwirelesscrackingtool;
 
 import principal.Configuracion;
@@ -147,54 +142,9 @@ public class AuthRoot extends javax.swing.JFrame {
 
     private void BotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarActionPerformed
         // TODO add your handling code here:
-        Shell shell = new Shell();
-        Root root = null;
-        try {
-            root = new Root();
-        } catch (IOException ex) {
-            Logger.getLogger(AuthRoot.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        comprobar();
 
-        String pass = String.valueOf(txtPassword.getPassword());
-        try {
-            if (shell.RunCheck(pass)) {
-                jTextField1.setText("Acceso Autorizado");
-                try {
-                    Thread.sleep(5000);
 
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-                Configuracion conf = new Configuracion();
-                conf.crearDir(pass);
-
-                String homeUsuario = System.getProperty("user.home");
-                String compNetwork = homeUsuario + "/.AWTestingresidual/AWTestingModNetworks";
-                File fichero = new File(compNetwork);
-                if (!fichero.exists()) {
-                    fichero.createNewFile();
-                    conf.CambiarNombreNetworkInterface();
-                    //Ejecuta el Comando para cambiar la configuracion de la asignacion de las NetworkInterfaces de nuestro PC.
-                    //Y crea el fichero en "/tmp/AWTestingModNetworks"
-                    JOptionPane.showMessageDialog(BotonAceptar, "El equipo se reiniciara en 5 segundos... ");
-                    try {
-                        Thread.sleep(5000);
-                        // conf.Reiniciar(); //comando para reiniciar el PC
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
-                } else {
-                    AWTGui ventanaPrincipal = new AWTGui();
-                    ventanaPrincipal.setVisible(true);
-                    this.setVisible(false);
-                }
-
-            } else {
-                jTextField1.setText("¡Acceso Denegago!. Vuelva a Intentarlo");
-            }
-        } catch (IOException ex) {
-            Logger.getLogger(AuthRoot.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }//GEN-LAST:event_BotonAceptarActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
@@ -245,6 +195,59 @@ public class AuthRoot extends javax.swing.JFrame {
             }
         });
     }
+
+    private void comprobar() {
+        Shell shell = new Shell();
+        Root root = null;
+        try {
+            root = new Root();
+        } catch (IOException ex) {
+            Logger.getLogger(AuthRoot.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String pass = String.valueOf(txtPassword.getPassword());
+        try {
+            if (shell.RunCheck(pass)) {
+                jTextField1.setText("Acceso Autorizado");
+                try {
+                    Thread.sleep(5000);
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+                Configuracion conf = new Configuracion();
+                conf.crearDir(pass);
+
+                String homeUsuario = System.getProperty("user.home");
+                String compNetwork = homeUsuario + "/.AWTestingresidual/AWTestingModNetworks";
+                File fichero = new File(compNetwork);
+                if (!fichero.exists()) {
+                    fichero.createNewFile();
+                    conf.CambiarNombreNetworkInterface();
+                    //Ejecuta el Comando para cambiar la configuracion de la asignacion de las NetworkInterfaces de nuestro PC.
+                    //Y crea el fichero en "/tmp/AWTestingModNetworks"
+                    JOptionPane.showMessageDialog(BotonAceptar, "El equipo se reiniciara en 5 segundos... ");
+                    try {
+                        Thread.sleep(5000);
+                        // conf.Reiniciar(); //comando para reiniciar el PC
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                } else {
+                    AWTGui ventanaPrincipal = new AWTGui();
+                    ventanaPrincipal.setVisible(true);
+                    this.setVisible(false);
+                }
+
+            } else {
+                jTextField1.setText("¡Acceso Denegago!. Vuelva a Intentarlo");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(AuthRoot.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuthRoot;
