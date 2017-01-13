@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class ColeccionTargetNetwork {
     private final String directorioTemporal="/tmp/.AWCTool/AircrackTemp/";
     ///tmp/.AWTesting/AircrackTemporal/
+    ///tmp/.AWCTool/AirTemp
    private Shell shell = new Shell();
 
     public ColeccionTargetNetwork() {

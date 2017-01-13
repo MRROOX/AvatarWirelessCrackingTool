@@ -27,8 +27,13 @@ public class Configuracion {
         String t = "ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules";
 
         ejecutor.ExecuteToString(t);
+        
+         String homeUsuario = System.getProperty("user.home");
+        //se verifica la existencia del archivo recidual, si no lo encuentra se ejecuta
+        //la clase de Autorizacion en donde se creara dicho archivo
+        String sFichero = homeUsuario + "/.AWCTool/AWCrakingToolWLANOK";
 
-        File fichero = new File("/tmp/AWTestingModNetworks");
+        File fichero = new File(sFichero);
 
     }
 
@@ -98,7 +103,7 @@ public class Configuracion {
     public static void crearDir(String msj) throws IOException {
         /*para crear un directorio dentro de /home/usuario Para almacenar los archivos temporales*/
         //String homeUsuario = System.getProperty("user.home");//Obtenemos el Nombre del Usuario
-        String cmd = "/tmp/.AWCTool/AirTemp";
+        String cmd = "/tmp/.AWCTool/AircrackTemp";
 // Direcotrio para archivos temporales de Airckar-ng
 //Ademas crearmos archivo temporal para almacenar las Network Interfaces
         String cmd1 = "/tmp/.AWCTool/AdminData"; //Directorio para almacenar Datos de Administracion

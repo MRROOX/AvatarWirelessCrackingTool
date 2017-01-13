@@ -219,13 +219,13 @@ public class AuthRoot extends javax.swing.JFrame {
                 conf.crearDir(pass);
 
                 String homeUsuario = System.getProperty("user.home");
-                String compNetwork = homeUsuario + "/.AWCTool/AWTestingModNetworks";
+                String compNetwork = homeUsuario + "/.AWCTool/AWCrakingToolWLANOK";
                 File fichero = new File(compNetwork);
                 if (!fichero.exists()) {
                     fichero.createNewFile();
                     conf.CambiarNombreNetworkInterface();
                     //Ejecuta el Comando para cambiar la configuracion de la asignacion de las NetworkInterfaces de nuestro PC.
-                    //Y crea el fichero en "/tmp/AWTestingModNetworks"
+                    //Y crea el fichero en "/.AWCTool/AWCrakingToolWLANOK"
                     JOptionPane.showMessageDialog(BotonAceptar, "El equipo se reiniciara en 5 segundos... ");
                     try {
                         Thread.sleep(5000);
