@@ -7,8 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ColeccionTargetNetwork {
-
-    Shell shell = new Shell();
+    private final String directorioTemporal="/tmp/.AWCTool/AircrackTemp/";
+    ///tmp/.AWTesting/AircrackTemporal/
+   private Shell shell = new Shell();
 
     public ColeccionTargetNetwork() {
 
@@ -23,11 +24,11 @@ public class ColeccionTargetNetwork {
 
         if ("ALL".equals(channel)) {
             //Comando de busqueda standar.
-            command = "timeout " + time + " airodump-ng --output-format csv --write /tmp/.AWTesting/AircrackTemporal/AWTesting-scan " + monInterface;
+            command = "timeout " + time + " airodump-ng --output-format csv --write "+directorioTemporal+"AWCTool-scan " + monInterface;
             cmd = "gnome-terminal -e '" + command+"'" ;
         } else {
             //comando de busqueda con un canal especifico.
-            command = "timeout " + time + " airodump-ng --output-format csv --write /tmp/.AWTesting/AircrackTemporal/AWTesting-scan  --channel " + channel + "  " + monInterface ;
+            command = "timeout " + time + " airodump-ng --output-format csv --write "+directorioTemporal+"AWCTool-scan  --channel " + channel + "  " + monInterface ;
             cmd = "gnome-terminal -e '" + command+"'" ;
         }
         shell.ExecuteCommandString(cmd);
@@ -47,7 +48,7 @@ public class ColeccionTargetNetwork {
 
     private ArrayList<targetNetwork> OrdenarTargetNetwork() {
         ArrayList<targetNetwork> TargetNet = new ArrayList<>();
-        String dirArchivo = "/tmp/.AWTesting/AircrackTemporal/AWTesting-scan-01.csv";
+        String dirArchivo = directorioTemporal+"AWTesting-scan-01.csv";
         String BSSID;
         String channel;
         String Speed;
@@ -96,7 +97,7 @@ public class ColeccionTargetNetwork {
     public ArrayList<VictimClient> OrdenarVictimClienMac() {
 
         ArrayList<VictimClient> VictimClient = new ArrayList<>();
-        String Directory = "/tmp/.AWTesting/AircrackTemporal/sniff_dump-01.csv";
+        String Directory = directorioTemporal+"sniff_dump-01.csv";
         String VictimC;
         String Station;
 
@@ -132,8 +133,8 @@ public class ColeccionTargetNetwork {
         String cmd[] = new String[4];
         String cmd0 = "";
         String command = "";
-        String directorio0 = "/tmp/.AWTesting/AircrackTemporal/wash-scan.csv";
-        String directorio1 = "/tmp/.AWTesting/AircrackTemporal/wash-scan.txt";
+        String directorio0 = directorioTemporal+"wash-scan.csv";
+        String directorio1 = directorioTemporal+"wash-scan.txt";
         cmd0 = "airmon-ng " + directorio0;
         shell.ExecuteCommandString(cmd0);
         command = "timeout " + time + " wash -i " + monitor + " -C -o " + directorio1;
@@ -164,7 +165,7 @@ public class ColeccionTargetNetwork {
     private ArrayList<WpsTargetNetwork> OrdenarTargetWPS() {
 
         ArrayList<WpsTargetNetwork> TNWPS = new ArrayList<>();
-        String directorio = "/tmp/.AWTesting/AircrackTemporal";
+        //String directorio = "/tmp/.AWTesting/AircrackTemporal";
         String BSSID;
         String Channel;
         String WPSLocked;
@@ -174,7 +175,7 @@ public class ColeccionTargetNetwork {
 
         try {
 
-            CsvReader targetNetwork_import = new CsvReader(directorio + "/wash-scan.csv");
+            CsvReader targetNetwork_import = new CsvReader(directorioTemporal+"wash-scan.csv");
             targetNetwork_import.readHeaders();
 
             while (targetNetwork_import.readRecord()) {
@@ -200,16 +201,16 @@ public class ColeccionTargetNetwork {
     }
 
     private void removerArchTEMP() throws IOException {
-        String directorio = "/tmp/.AWTesting/AircrackTemporal/";
-        String cmd = "rm " + directorio + "AWTesting-scan-0*";
+        //String directorio = "/tmp/.AWTesting/AircrackTemporal/";
+        String cmd = "rm "+directorioTemporal+"AWTesting-scan-0*";
         shell.ExecuteCommandString(cmd);
 
     }
 
     private void rmWashTemp() throws IOException {
 
-        String directorio = "/tmp/.AWTesting/AircrackTemporal/";
-        String cmd = "rm " + directorio + "wash-scan*.csv";
+        //String directorio = "/tmp/.AWTesting/AircrackTemporal/";
+        String cmd = "rm "+directorioTemporal+"wash-scan*.csv";
         shell.ExecuteCommandString(cmd);
 
     }

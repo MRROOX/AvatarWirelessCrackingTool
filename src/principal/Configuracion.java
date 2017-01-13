@@ -14,42 +14,45 @@ public class Configuracion {
     
     ### 
      */
-    Shell ejecutor = new Shell();
+    private Shell ejecutor = new Shell();
 
     public Configuracion() {
 
     }
 
     public void CambiarNombreNetworkInterface() throws IOException {
-        String cmd[] = new String[1];
-        cmd[0] = "ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules";
-        for (int i = 0; i < cmd.length; i++) {//se ejecuta el arreglo de comandos
-            ejecutor.ExecuteCommand(cmd);
-        }
+        //ln Un enlace de un determinado archivo.
+        //Ej:ln doc1 doc2.  Ahora doc2 es un enlace al archivo doc1.
+
+        String t = "ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules";
+
+        ejecutor.ExecuteToString(t);
+
         File fichero = new File("/tmp/AWTestingModNetworks");
 
     }
 
     public void Reiniciar() throws IOException {
-        String cmd[] = new String[1];
-        cmd[0] = "reboot";
+        
+       String cmd = "reboot";
         //se ejecuta el arreglo de comandos 
-        ejecutor(cmd);
+      
+         ejecutor.ExecuteToString(cmd);
     }
 
     public boolean katoolin() throws IOException {
- 
+
         boolean R = false;
         /*Array cmd[] con todo los comando necesarios para isntalar los programas requediso para el funcionamiento de katoolin*/
-        String cmd[] = new String[1];
+        String cmd="";
         if (verProg() == true) {
             R = false;
             //System.out.println("Todos los programas necesarios instalados");
         } else {
             //Matriz String de comandos de katoolin para instalar programas necesario si es que se necesitara.
             //sudo su
-            
-            cmd[0]="sudo apt-get update && sudo apt-get install git -y && "
+
+            cmd= "sudo apt-get update && sudo apt-get install git -y && "
                     + "sudo apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6 && "
                     + "sudo cp /etc/apt/sources.list /etc/apt/sources.list-BAK && "
                     + "sudo echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free >> /etc/apt/sources.list && "
@@ -60,8 +63,8 @@ public class Configuracion {
                     + "sudo cp /etc/sources.list-BAK /etc/sources.list && "
                     + "sudo rm /etc/sources.list-BAK && "
                     + "sudo apt-get update";
-          
-            ejecutor(cmd);
+
+          ejecutor.ExecuteToString(cmd);
             R = true;
         }
         return R;

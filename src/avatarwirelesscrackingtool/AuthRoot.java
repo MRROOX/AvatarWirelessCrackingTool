@@ -210,7 +210,7 @@ public class AuthRoot extends javax.swing.JFrame {
             if (shell.RunCheck(pass)) {
                 jTextField1.setText("Acceso Autorizado");
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
 
                 } catch (Exception ex) {
                     ex.printStackTrace();
@@ -219,7 +219,7 @@ public class AuthRoot extends javax.swing.JFrame {
                 conf.crearDir(pass);
 
                 String homeUsuario = System.getProperty("user.home");
-                String compNetwork = homeUsuario + "/.AWTestingresidual/AWTestingModNetworks";
+                String compNetwork = homeUsuario + "/.AWCTool/AWTestingModNetworks";
                 File fichero = new File(compNetwork);
                 if (!fichero.exists()) {
                     fichero.createNewFile();

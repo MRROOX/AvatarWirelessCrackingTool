@@ -179,11 +179,11 @@ public class Autorizacion extends javax.swing.JFrame {
     private void OkTerminos() {
 
         String homeUsuario = System.getProperty("user.home");
-        String sFichero = homeUsuario + "/.AWCTool/AWCrakingTool";
-
         String cmd = homeUsuario + "/.AWCTool";
         File directorio1 = new File(cmd);
         directorio1.mkdirs();
+        //Se procede a crear el archivo recidual de primera ejecucion y 
+        //configuracion de AWCTool
         File fichero = new File(homeUsuario + "/.AWCTool/AWCrakingTool");
         try {
             if (fichero.createNewFile()) {

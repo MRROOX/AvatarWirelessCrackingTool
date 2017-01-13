@@ -151,7 +151,7 @@ public class Shell extends Thread {
         String Salida = "";
         StringBuffer contenido = new StringBuffer();
         String sep = "";
-        String n = "/tmp/.AWTesting/AdminData/rootpasswd.txt";
+        String n = "/tmp/.AWCToolAdminData/frodo";
         FileReader archivo = new FileReader(n);
         BufferedReader clave = new BufferedReader(archivo);
         while ((Salida = clave.readLine()) != null) {
