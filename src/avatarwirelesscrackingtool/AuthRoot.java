@@ -47,9 +47,9 @@ public class AuthRoot extends javax.swing.JFrame {
         AuthRoot.setBackground(new java.awt.Color(1, 1, 1));
         AuthRoot.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel4.setFont(new java.awt.Font("Mad's Scrawl BRK", 2, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Mad's Scrawl BRK", 2, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 255, 93));
-        jLabel4.setText("Avatar Wireless Testing");
+        jLabel4.setText("Avatar Wireless Cracking Tool");
 
         jLabel5.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 178, 255));
@@ -89,6 +89,10 @@ public class AuthRoot extends javax.swing.JFrame {
         AuthRoot.setLayout(AuthRootLayout);
         AuthRootLayout.setHorizontalGroup(
             AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuthRootLayout.createSequentialGroup()
+                .addContainerGap(205, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(195, 195, 195))
             .addGroup(AuthRootLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(BotonAceptar)
@@ -96,30 +100,28 @@ public class AuthRoot extends javax.swing.JFrame {
                 .addComponent(BotonCancelar)
                 .addGap(31, 31, 31))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuthRootLayout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(195, 195, 195))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(AuthRootLayout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addGroup(AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addGroup(AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtPassword)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGap(135, 135, 135)
+                .addGroup(AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtPassword)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AuthRootLayout.setVerticalGroup(
             AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AuthRootLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel4)
-                .addGap(50, 50, 50)
+                .addGap(72, 72, 72)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(AuthRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonAceptar)
                     .addComponent(BotonCancelar))
@@ -141,9 +143,7 @@ public class AuthRoot extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarActionPerformed
-        // TODO add your handling code here:
         comprobar();
-
 
     }//GEN-LAST:event_BotonAceptarActionPerformed
 

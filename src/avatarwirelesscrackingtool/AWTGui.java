@@ -173,7 +173,7 @@ public class AWTGui extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(1, 1, 1));
         jLabel1.setFont(new java.awt.Font("Mad's Scrawl BRK", 2, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 134));
-        jLabel1.setText("Avatar Wireless Testing");
+        jLabel1.setText("Avatar Wireless Cracking Tool");
 
         jTabbedPane1.setBackground(new java.awt.Color(1, 1, 1));
         jTabbedPane1.setBorder(null);
@@ -1321,7 +1321,7 @@ public class AWTGui extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
