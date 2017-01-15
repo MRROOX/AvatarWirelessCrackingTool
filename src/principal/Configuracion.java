@@ -7,13 +7,10 @@ import java.io.BufferedWriter;
 
 public class Configuracion {
 
-    /* Aqui se encuentran las opcines para:
-    
-    ### Crear y ubicar el directorio donde se almacenaran los archivos temporales .cap
-    generados por aircrack-ng.
-    
-    ### 
-     */
+    /* Aqui se encuentran las opcines para:    
+        Crear y ubicar el directorio donde se almacenaran los archivos temporales .cap
+        generados por aircrack-ng.
+    */
     private Shell ejecutor = new Shell();
 
     public Configuracion() {
@@ -27,8 +24,8 @@ public class Configuracion {
         String t = "ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules";
 
         ejecutor.ExecuteToString(t);
-        
-         String homeUsuario = System.getProperty("user.home");
+
+        String homeUsuario = System.getProperty("user.home");
         //se verifica la existencia del archivo recidual, si no lo encuentra se ejecuta
         //la clase de Autorizacion en donde se creara dicho archivo
         String sFichero = homeUsuario + "/.AWCTool/AWCrakingToolWLANOK";
@@ -38,18 +35,18 @@ public class Configuracion {
     }
 
     public void Reiniciar() throws IOException {
-        
-       String cmd = "reboot";
+
+        String cmd = "reboot";
         //se ejecuta el arreglo de comandos 
-      
-         ejecutor.ExecuteToString(cmd);
+
+        ejecutor.ExecuteToString(cmd);
     }
 
     public boolean katoolin() throws IOException {
 
         boolean R = false;
         /*Array cmd[] con todo los comando necesarios para isntalar los programas requediso para el funcionamiento de katoolin*/
-        String cmd="";
+        String cmd = "";
         if (verProg() == true) {
             R = false;
             //System.out.println("Todos los programas necesarios instalados");
@@ -57,7 +54,7 @@ public class Configuracion {
             //Matriz String de comandos de katoolin para instalar programas necesario si es que se necesitara.
             //sudo su
 
-            cmd= "sudo apt-get update && sudo apt-get install git -y && "
+            cmd = "sudo apt-get update && sudo apt-get install git -y && "
                     + "sudo apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6 && "
                     + "sudo cp /etc/apt/sources.list /etc/apt/sources.list-BAK && "
                     + "sudo echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free >> /etc/apt/sources.list && "
@@ -69,7 +66,7 @@ public class Configuracion {
                     + "sudo rm /etc/sources.list-BAK && "
                     + "sudo apt-get update";
 
-          ejecutor.ExecuteToString(cmd);
+            ejecutor.ExecuteToString(cmd);
             R = true;
         }
         return R;

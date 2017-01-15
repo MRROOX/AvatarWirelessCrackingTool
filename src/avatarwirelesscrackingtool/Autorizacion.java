@@ -35,10 +35,12 @@ public class Autorizacion extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Mad's Scrawl BRK", 2, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 7));
-        jLabel1.setText("Avatar Wireless Testing");
+        jLabel1.setText("Avatar Wireless Cracking Tool");
 
         txtAutorizacion.setEditable(false);
+        txtAutorizacion.setBackground(new java.awt.Color(1, 1, 1));
         txtAutorizacion.setColumns(20);
+        txtAutorizacion.setForeground(new java.awt.Color(254, 254, 254));
         txtAutorizacion.setRows(5);
         jScrollPane1.setViewportView(txtAutorizacion);
 
@@ -77,16 +79,16 @@ public class Autorizacion extends javax.swing.JFrame {
                         .addComponent(checkTerminos)
                         .addGap(386, 386, 386)
                         .addComponent(BotonAceptar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                         .addComponent(BotonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(215, 215, 215))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(186, 186, 186))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

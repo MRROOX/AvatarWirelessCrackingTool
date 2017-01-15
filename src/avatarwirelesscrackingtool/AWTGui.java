@@ -1454,18 +1454,18 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // Autoload client victim....
-        
-        ColeccionTargetNetwork CT=new ColeccionTargetNetwork();
-        ArrayList<VictimClient> CV=new ArrayList<>();
-        
+
+        ColeccionTargetNetwork CT = new ColeccionTargetNetwork();
+        ArrayList<VictimClient> CV = new ArrayList<>();
+
         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-            CV=CT.OrdenarVictimClienMac();
-            
-            for(int i=0;i<CV.size();i++){
+            CV = CT.OrdenarVictimClienMac();
+
+            for (int i = 0; i < CV.size(); i++) {
                 jComboBox5.addItem(CV.get(i).getVictimClient());
-            
+
             }
-           
+
         }
 
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -1477,8 +1477,8 @@ public class AWTGui extends javax.swing.JFrame {
 
                 String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));
                 String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));
-                String Essid= String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(),0));
-                wepStart.PTestInjAP(Essid,Bssidvic, monitor);
+                String Essid = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+                wepStart.PTestInjAP(Essid, Bssidvic, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
@@ -1490,15 +1490,15 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-            
-                WEP wepStart = new WEP();
 
-String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
-String Essid=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
-String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
-                try {
-                wepStart.StartSniffinAndLoggind(Essid,Bssidvic,Channel, monitor);
+            WEP wepStart = new WEP();
+
+            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essid = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+            String Channel = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
+            try {
+                wepStart.StartSniffinAndLoggind(Essid, Bssidvic, Channel, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
@@ -1653,13 +1653,13 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
             String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
-                wepStart.AssoWhApFakeAuth(monitor,Essidvic,Bssidvic,MiMAC);
+                wepStart.AssoWhApFakeAuth(monitor, Essidvic, Bssidvic, MiMAC);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
- 
+
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
@@ -1669,62 +1669,63 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // 
         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-       try {     WEP wepStart = new WEP();
+            try {
+                WEP wepStart = new WEP();
 
-            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            
-            
-                wepStart.StartChopChopAttack( MiMAC, monitor);
+                String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+                String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+
+                wepStart.StartChopChopAttack(MiMAC, monitor);
 
                 // TODO add your handling code here:
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
-   
+        }
+
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
 
-  // 
+        // 
         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-       try {     WEP wepStart = new WEP();
+            try {
+                WEP wepStart = new WEP();
 
-            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Bssidvic=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(),2));
-         
-                wepStart.CreateArpInjPacketOnAccPoint( Bssidvic,  MiMAC,  monitor);
+                String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+                String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+                String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
+
+                wepStart.CreateArpInjPacketOnAccPoint(Bssidvic, MiMAC, monitor);
 
                 // TODO add your handling code here:
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
-        
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-       try {     
-           WEP wepStart = new WEP();
 
-            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            wepStart.InjCreateArpPacket(monitor);
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+            try {
+                WEP wepStart = new WEP();
+
+                String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+                wepStart.InjCreateArpPacket(monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
-  
+        }
+
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
-         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
@@ -1732,14 +1733,14 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
             String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
-                wepStart.fragAttack(Bssidvic,MiMAC, monitor);
+                wepStart.fragAttack(Bssidvic, MiMAC, monitor);
 
                 // TODO add your handling code here:
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-      
+
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -1758,17 +1759,17 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
- 
+
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
-        
-         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-           
+
             try {
                 wepStart.InjectPackVictAccessPoint(monitor);
 
@@ -1777,12 +1778,12 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-  
+
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-      
-          if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
@@ -1791,18 +1792,18 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
             String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
-                wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC,monitor);
+                wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
-        
+        }
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-    
-         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
@@ -1810,19 +1811,19 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
             String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
-                wepStart.ARPrequestreplay(Bssidvic,MiMAC, monitor);
+                wepStart.ARPrequestreplay(Bssidvic, MiMAC, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
+        }
 
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        
-         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
@@ -1831,33 +1832,34 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
             String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
-                wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC,monitor);
+                wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC, monitor);
 
                 // TODO add your handling code here:
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
-   
+        }
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
- if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-      try {      WEP wepStart = new WEP();
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+            try {
+                WEP wepStart = new WEP();
 
-            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
-            String n=jSpinner1.getName();
-            String m=jSpinner2.getName();
-            
-                wepStart.Capturereplaypackets(m,n,Bssidvic,MiMAC,monitor);
+                String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+                String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+                String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+                String n = jSpinner1.getName();
+                String m = jSpinner2.getName();
+
+                wepStart.Capturereplaypackets(m, n, Bssidvic, MiMAC, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
- 
+        }
+
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
@@ -1865,19 +1867,20 @@ String Channel=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-         if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
-      try {      WEP wepStart = new WEP();
+        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+            try {
+                WEP wepStart = new WEP();
 
-            String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            String VictimClient=jComboBox5.getName();
-            
+                String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
+                String VictimClient = jComboBox5.getName();
+
                 wepStart.StartClientFragmentacionAttack(VictimClient, monitor);
 
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }  
-    
+        }
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
