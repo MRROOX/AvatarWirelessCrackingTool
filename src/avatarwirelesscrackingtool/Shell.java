@@ -40,7 +40,7 @@ public class Shell extends Thread {
                 execCommand(g);
 
             } catch (IOException e) {
-                //System.out.println("Error "+e);
+                System.out.println("Error "+e);
             }
         }
     }
@@ -53,7 +53,7 @@ public class Shell extends Thread {
             execCommand(g);
 
         } catch (IOException e) {
-            //System.out.println("Error "+e);
+            System.out.println("Error "+e);
         }
 
     }

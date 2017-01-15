@@ -33,8 +33,8 @@ public class Autorizacion extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(1, 1, 1));
 
-        jLabel1.setFont(new java.awt.Font("Mad's Scrawl BRK", 2, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 255, 7));
+        jLabel1.setFont(new java.awt.Font("Gaposis Solid BRK", 2, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 255, 125));
         jLabel1.setText("Avatar Wireless Cracking Tool");
 
         txtAutorizacion.setEditable(false);
