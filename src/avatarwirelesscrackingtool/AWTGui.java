@@ -30,7 +30,6 @@ public class AWTGui extends javax.swing.JFrame {
      */
     public AWTGui() throws IOException {
         Configuracion conf = new Configuracion();
-
         initComponents();
         setLocationRelativeTo(null);
 
@@ -59,9 +58,9 @@ public class AWTGui extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        StModeMonitorBoton = new javax.swing.JButton();
+        ReloadListBoton = new javax.swing.JButton();
+        ResetModMonitoBoton = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -73,8 +72,6 @@ public class AWTGui extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
@@ -93,7 +90,6 @@ public class AWTGui extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jPanel22 = new javax.swing.JPanel();
-        jScrollBar2 = new javax.swing.JScrollBar();
         jLabel18 = new javax.swing.JLabel();
         jButton25 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
@@ -156,7 +152,6 @@ public class AWTGui extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jComboBox4 = new javax.swing.JComboBox<>();
-        jLabel10 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
@@ -170,14 +165,14 @@ public class AWTGui extends javax.swing.JFrame {
         PanelPrincipal.setForeground(new java.awt.Color(1, 1, 1));
 
         jLabel1.setBackground(new java.awt.Color(1, 1, 1));
-        jLabel1.setFont(new java.awt.Font("Gaposis Solid BRK", 2, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monospaced", 2, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 134));
         jLabel1.setText("Avatar Wireless Cracking Tool");
 
         jTabbedPane1.setBackground(new java.awt.Color(1, 1, 1));
         jTabbedPane1.setBorder(null);
         jTabbedPane1.setForeground(new java.awt.Color(1, 1, 1));
-        jTabbedPane1.setFont(new java.awt.Font("Mad's Scrawl BRK", 1, 18)); // NOI18N
+        jTabbedPane1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(1, 1, 1));
         jPanel1.setBorder(null);
@@ -195,15 +190,15 @@ public class AWTGui extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1033, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(445, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(228, 228, 228)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Welcome", jPanel1);
@@ -212,31 +207,35 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel2.setBorder(null);
         jPanel2.setPreferredSize(new java.awt.Dimension(1061, 546));
 
-        jLabel2.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 178, 255));
         jLabel2.setText("Select Network Interface");
 
-        jButton1.setText("Start Mode Monitor");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        StModeMonitorBoton.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        StModeMonitorBoton.setText("Start Mode Monitor");
+        StModeMonitorBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                StModeMonitorBotonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Reload List");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ReloadListBoton.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        ReloadListBoton.setText("Reload List");
+        ReloadListBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ReloadListBotonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Reset Mode Monitor");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ResetModMonitoBoton.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        ResetModMonitoBoton.setText("Reset Mode Monitor");
+        ResetModMonitoBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ResetModMonitoBotonActionPerformed(evt);
             }
         });
 
+        jTable1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -260,6 +259,7 @@ public class AWTGui extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setToolTipText("");
         jScrollPane7.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -270,28 +270,29 @@ public class AWTGui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
                         .addGap(12, 12, 12)
-                        .addComponent(jButton3))
+                        .addComponent(ReloadListBoton)
+                        .addGap(18, 18, 18)
+                        .addComponent(StModeMonitorBoton)
+                        .addGap(12, 12, 12)
+                        .addComponent(ResetModMonitoBoton))
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addContainerGap(259, Short.MAX_VALUE))
+                    .addComponent(ReloadListBoton)
+                    .addComponent(StModeMonitorBoton)
+                    .addComponent(ResetModMonitoBoton))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Configuration", jPanel2);
@@ -300,11 +301,12 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel3.setBorder(null);
         jPanel3.setPreferredSize(new java.awt.Dimension(1061, 546));
 
-        jLabel3.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 178, 255));
         jLabel3.setText("List of Target Networks        ( WEP & WPA/ WPA2 )");
 
         jButton5.setBackground(new java.awt.Color(255, 140, 0));
+        jButton5.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton5.setForeground(new java.awt.Color(1, 1, 1));
         jButton5.setText("Scan Target Networks");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -313,6 +315,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jTable2.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -337,7 +340,18 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
         jScrollPane8.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(0).setHeaderValue("ESSID");
+            jTable2.getColumnModel().getColumn(1).setHeaderValue("BSSID");
+            jTable2.getColumnModel().getColumn(2).setHeaderValue("CHANNEL");
+            jTable2.getColumnModel().getColumn(3).setHeaderValue("Speed");
+            jTable2.getColumnModel().getColumn(4).setHeaderValue("Power");
+            jTable2.getColumnModel().getColumn(5).setHeaderValue("Privacy");
+            jTable2.getColumnModel().getColumn(6).setHeaderValue("Cypher");
+            jTable2.getColumnModel().getColumn(7).setHeaderValue("Authentication");
+        }
 
+        jComboBox1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3", "5", "10", "12", "14", "15", "16", "18", "20", "25", "30", " " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -345,10 +359,11 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 178, 255));
         jLabel6.setText("Time (seg)");
 
+        jComboBox2.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ALL", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,34 +372,14 @@ public class AWTGui extends javax.swing.JFrame {
         });
 
         jLabel7.setBackground(new java.awt.Color(1, 1, 1));
-        jLabel7.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 178, 255));
         jLabel7.setText("Channel");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(144, 144, 144))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -392,30 +387,37 @@ public class AWTGui extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 915, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton5)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                        .addComponent(jButton5)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5)
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Target Networks", jPanel3);
@@ -435,12 +437,14 @@ public class AWTGui extends javax.swing.JFrame {
 
         jTabbedPane6.setBackground(new java.awt.Color(1, 1, 1));
         jTabbedPane6.setBorder(null);
+        jTabbedPane6.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTabbedPane6.setPreferredSize(new java.awt.Dimension(1061, 511));
 
         jPanel11.setBackground(new java.awt.Color(1, 1, 1));
         jPanel11.setBorder(null);
         jPanel11.setPreferredSize(new java.awt.Dimension(1061, 216));
 
+        jToggleButton1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jToggleButton1.setText("Start Sniffing and Logging");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -448,14 +452,15 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 178, 255));
         jLabel11.setText("Functionalities");
 
-        jLabel12.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 178, 255));
         jLabel12.setText("Tests");
 
+        jButton6.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton6.setText("Realizar Una Prueba de Injeccion de AP");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,20 +473,13 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel11Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel11Layout.createSequentialGroup()
-                            .addGap(97, 97, 97)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(616, Short.MAX_VALUE))
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -505,10 +503,11 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel21.setBackground(new java.awt.Color(1, 1, 1));
         jPanel21.setBorder(null);
 
-        jLabel29.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(0, 178, 255));
         jLabel29.setText("Chop Chop Attack");
 
+        jButton21.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton21.setText("Start Fake Access Point Authentication On Victim");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,6 +515,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton14.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton14.setText("Start The ChopChop Attack");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,6 +523,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton15.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton15.setText("Create The ARP Packet To Be Injected On The Victim Access Point");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -530,6 +531,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton22.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton22.setText("Inject The Created Packet On Victim Access Point");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -544,43 +546,50 @@ public class AWTGui extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jButton22))
-                    .addComponent(jButton15)
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(jLabel29)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel21Layout.createSequentialGroup()
+                                .addGap(144, 144, 144)
+                                .addComponent(jLabel29))
+                            .addGroup(jPanel21Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(jButton21))
+                            .addGroup(jPanel21Layout.createSequentialGroup()
+                                .addGap(113, 113, 113)
+                                .addComponent(jButton14)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+                        .addGap(0, 12, Short.MAX_VALUE)
+                        .addComponent(jButton15)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton22)
+                .addGap(53, 53, 53))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addContainerGap()
                 .addComponent(jLabel29)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton21)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton14)
-                .addGap(44, 44, 44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton15)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton22)
-                .addGap(150, 150, 150))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel22.setBackground(new java.awt.Color(1, 1, 1));
         jPanel22.setBorder(null);
 
-        jLabel18.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 178, 255));
         jLabel18.setText("Fragmentation Attack");
 
+        jButton25.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton25.setText("Fragmentation Attack");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -588,6 +597,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton23.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton23.setText("Inject The Created Packet On Victim Access Point");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,6 +605,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton24.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton24.setText("Create The ARP Packet To Be Injected On The Victim Access Point");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -602,6 +613,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton26.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton26.setText("Start Fake Access Point Authentication On Victim");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -613,38 +625,37 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
+            .addGroup(jPanel22Layout.createSequentialGroup()
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton26))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
                         .addComponent(jLabel18))
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(120, 120, 120)
+                        .addComponent(jButton25))
                     .addGroup(jPanel22Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton24))
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
+                        .addGap(45, 45, 45)
                         .addComponent(jButton23)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(jScrollBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel18)
-                .addGap(69, 69, 69)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton26)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton25)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton24)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton23)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -654,15 +665,18 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("WEP Testing (NO-CLIENT)", jPanel12);
@@ -670,10 +684,11 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(1, 1, 1));
         jPanel13.setBorder(null);
 
-        jLabel13.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 178, 255));
         jLabel13.setText("ARP Request Replay Attack");
 
+        jButton9.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton9.setText("Associate With AP Using Fake Auth");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -681,6 +696,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton10.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton10.setText(" ARP Request Replay");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -688,10 +704,11 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 178, 255));
         jLabel14.setText("ARP Request Attack");
 
+        jButton11.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton11.setText("Associate With AP Using Fake Auth");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -699,18 +716,19 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 178, 255));
         jLabel15.setText("Minimum Packet Length");
 
-        jLabel16.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 178, 255));
         jLabel16.setText("Maximum Packet Length");
 
-        jLabel17.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 178, 255));
         jLabel17.setText("Fragmentation Client Attack");
 
+        jButton12.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton12.setText("Load Victim Clients");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -718,6 +736,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton13.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton13.setText("Start Client Fragmentation Attack");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -725,6 +744,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton27.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton27.setText("Capture Replay Packets");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -732,17 +752,20 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jSpinner1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(64, 0, 999, 1));
 
+        jSpinner2.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jSpinner2.setModel(new javax.swing.SpinnerNumberModel(86, 0, 999, 1));
 
+        jComboBox5.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox5ActionPerformed(evt);
             }
         });
 
-        jLabel19.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 178, 255));
         jLabel19.setText("Add Victim Client MAC");
 
@@ -751,34 +774,40 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(787, 787, 787))
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinner1))
-                            .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinner2)))))
-                .addGap(187, 187, 187)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(61, 61, 61))
-                    .addComponent(jButton12)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(154, Short.MAX_VALUE))
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton10)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton9)))
+                            .addComponent(jButton11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel17))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton12)
+                                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton13))
+                                .addGap(161, 161, 161)))
+                        .addGap(331, 331, 331))))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -786,38 +815,37 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9)
-                            .addComponent(jLabel19))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton10)
-                        .addGap(60, 60, 60)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel14))
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(36, 36, 36)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton12)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addComponent(jButton13)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton12)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton11)
-                .addGap(26, 26, 26)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton13)
+                    .addComponent(jButton11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton27)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("WEP Testing (WITH-CLIENT)", jPanel13);
@@ -825,17 +853,19 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel19.setBackground(new java.awt.Color(1, 1, 1));
         jPanel19.setBorder(null);
 
-        jLabel25.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 178, 255));
         jLabel25.setText("Standar WEP Cracking");
 
+        jButton19.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton19.setText("Aircrack-ng  Decrypt  PASSWORD.");
 
-        jLabel26.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(0, 178, 255));
         jLabel26.setText("When You Have Enougth Packets ( >5000 ) You Can Try To Descrypt The Password ");
 
         jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTextArea3.setRows(5);
         jScrollPane6.setViewportView(jTextArea3);
 
@@ -846,30 +876,31 @@ public class AWTGui extends javax.swing.JFrame {
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(391, 391, 391)
-                        .addComponent(jLabel25))
+                        .addContainerGap()
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(349, 349, 349)
+                        .addContainerGap()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
                         .addComponent(jButton19))
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane6))))
-                .addContainerGap(262, Short.MAX_VALUE))
+                        .addGap(174, 174, 174)
+                        .addComponent(jLabel25)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel25)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel26)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addComponent(jButton19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("Cracking WEP", jPanel19);
@@ -878,11 +909,13 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 1061, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 914, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -903,8 +936,8 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -917,13 +950,13 @@ public class AWTGui extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("WEP", jPanel4);
@@ -942,11 +975,13 @@ public class AWTGui extends javax.swing.JFrame {
 
         jTabbedPane3.setBackground(new java.awt.Color(1, 1, 1));
         jTabbedPane3.setBorder(null);
+        jTabbedPane3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTabbedPane3.setPreferredSize(new java.awt.Dimension(1090, 511));
 
         jPanel23.setBackground(new java.awt.Color(1, 1, 1));
         jPanel23.setBorder(null);
 
+        jButton28.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton28.setText("Realizar Una Prueba de Injeccion de AP");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -954,10 +989,11 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel27.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 178, 255));
         jLabel27.setText("Pruebas");
 
+        jToggleButton3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jToggleButton3.setText("Comenzar Sniffing and Loggin");
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -965,7 +1001,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel30.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(0, 178, 255));
         jLabel30.setText("Funcionalidades");
 
@@ -977,30 +1013,31 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel30)
                             .addGroup(jPanel23Layout.createSequentialGroup()
-                                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel30)
-                                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(113, 113, 113))))
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jToggleButton3))
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton28)))
+                .addContainerGap(654, Short.MAX_VALUE))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel30)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton3)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel27)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel27)
+                .addGap(18, 18, 18)
                 .addComponent(jButton28)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("General Functionalities WPA / WPA2", jPanel23);
@@ -1008,10 +1045,11 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(1, 1, 1));
         jPanel18.setBorder(null);
 
-        jLabel23.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 178, 255));
         jLabel23.setText("WPA  Handshake Testing ");
 
+        jButton17.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton17.setText("Comenzar Ataque de Fragmentacion al Cliente");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1019,6 +1057,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton18.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton18.setText("Load Victim Client");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1026,16 +1065,20 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel24.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 178, 255));
         jLabel24.setText("Add The Deauth Number");
 
         jTextField2.setEditable(false);
+        jTextField2.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTextField2.setText("Now you need to capture the HandShake, Start The Deauthentication.");
 
+        jSpinner3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jSpinner3.setModel(new javax.swing.SpinnerNumberModel(64, 0, 999, 1));
 
-        jLabel20.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jComboBox6.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+
+        jLabel20.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 178, 255));
         jLabel20.setText("Client Victim");
 
@@ -1044,50 +1087,54 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel23)
-                        .addGap(404, 404, 404)
-                        .addComponent(jLabel24))
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addGap(171, 171, 171)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addGap(292, 292, 292)
+                                .addComponent(jLabel24))))
                     .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(346, 346, 346)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
-                        .addGap(172, 172, 172)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(649, 649, 649))
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton18))
+                        .addGap(156, 156, 156)
+                        .addComponent(jButton17)))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel24))
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel23))
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20))
+                .addComponent(jLabel20)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton17)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton18)
-                    .addComponent(jButton17))
-                .addGap(145, 145, 145))
+                .addComponent(jButton18)
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("WPA / WPA2 Testing", jPanel18);
@@ -1095,13 +1142,16 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel20.setBackground(new java.awt.Color(1, 1, 1));
         jPanel20.setBorder(null);
 
-        jLabel28.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(0, 178, 255));
         jLabel28.setText("Standar Cracking");
 
+        jTextField1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+
+        jButton20.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton20.setText("Aircrack-ng Crack WPA PASSOWORD");
 
-        jLabel5.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 178, 255));
         jLabel5.setText("Add You Diccionary");
 
@@ -1113,17 +1163,15 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(63, 63, 63)
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(667, Short.MAX_VALUE))
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(646, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1135,7 +1183,7 @@ public class AWTGui extends javax.swing.JFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton20)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Cracking WPA / WPA2", jPanel20);
@@ -1145,8 +1193,8 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1059, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 914, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1157,7 +1205,9 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1182,8 +1232,8 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 914, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,10 +1245,11 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(1, 1, 1));
         jPanel6.setBorder(null);
 
-        jLabel4.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 178, 255));
         jLabel4.setText("List Of Target Networks");
 
+        jButton4.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton4.setText("Scan Target Networks");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1206,6 +1257,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jTable3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1231,16 +1283,18 @@ public class AWTGui extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable3);
 
+        jComboBox3.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5", "7", "10", "12", "15", "17", "20", "25", "30", " " }));
 
-        jLabel8.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 178, 255));
         jLabel8.setText(" Scan Time (Seg)");
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 178, 255));
         jLabel9.setText("IMPLEMENTACION TESTING  REAVER & PIXIEWPS ");
 
+        jButton7.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton7.setText("REAVER & PIXIEWPS");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1248,6 +1302,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jButton8.setText("REAVER STANDAR");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1255,6 +1310,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
 
+        jComboBox4.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1263,11 +1319,17 @@ public class AWTGui extends javax.swing.JFrame {
         });
 
         jCheckBox1.setBackground(new java.awt.Color(1, 1, 1));
-        jCheckBox1.setFont(new java.awt.Font("Ubuntu Light", 1, 15)); // NOI18N
+        jCheckBox1.setFont(new java.awt.Font("Monospaced", 1, 10)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(0, 178, 255));
         jCheckBox1.setText("Force ");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jTextArea4.setRows(5);
         jTextArea4.setText("Pixie-Dust\n[1] Run pixiewps with PKE PKR.\n[2] E-Hash1.\n[3] E-Hash2 and E-Nonce. (Ralink, Broadcom, Realtek)");
         jScrollPane9.setViewportView(jTextArea4);
@@ -1276,35 +1338,42 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton8)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jLabel9))
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jCheckBox1))
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGap(271, 271, 271)
+                            .addComponent(jLabel8)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButton4)))
+                    .addContainerGap(343, Short.MAX_VALUE)))
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(244, 244, 244)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
-                                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton4))))
-                    .addComponent(jCheckBox1))
-                .addContainerGap(151, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
+                        .addComponent(jButton7)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1317,26 +1386,23 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                    .addComponent(jLabel8))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel9)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jCheckBox1)
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addGap(40, 40, 40))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("WPS", jPanel6);
@@ -1346,31 +1412,32 @@ public class AWTGui extends javax.swing.JFrame {
         PanelPrincipalLayout.setHorizontalGroup(
             PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(266, 266, 266)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 925, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PanelPrincipalLayout.setVerticalGroup(
             PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(164, 164, 164))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 473, Short.MAX_VALUE)
         );
 
         pack();
@@ -1505,54 +1572,7 @@ public class AWTGui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        //Boton para escanear las Target Networks
-        ArrayList<targetNetwork> TargetNet = new ArrayList<>();
-        ColeccionTargetNetwork colecTN = new ColeccionTargetNetwork();
-        DefaultTableModel modelo2 = (DefaultTableModel) jTable2.getModel();
-        Object[] fila = new Object[modelo2.getColumnCount()];
-
-        if (jTable1.getSelectedRows().length > 0) {
-            String monInterface = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));
-            String time = jComboBox1.getSelectedItem().toString();
-            String channel = jComboBox2.getSelectedItem().toString();
-            try {
-                TargetNet = colecTN.scanTargets(monInterface, time, channel);
-                while (modelo2.getRowCount() > 0) {//Secuencia para limpiar jtable
-                    for (int j = 0; j < modelo2.getRowCount(); j++) {
-                        modelo2.removeRow(j);
-                    }
-                }
-
-                for (int i = 0; i < TargetNet.size(); i++) {
-
-                    fila[0] = TargetNet.get(i).getESSID();
-                    fila[1] = TargetNet.get(i).getBSSID();
-                    fila[2] = TargetNet.get(i).getChannel();
-                    fila[3] = TargetNet.get(i).getSpeed();
-                    fila[4] = TargetNet.get(i).getPower();
-                    fila[5] = TargetNet.get(i).getPrivacy();
-                    fila[6] = TargetNet.get(i).getCipher();
-                    fila[7] = TargetNet.get(i).getAuthentication();
-                    modelo2.addRow(fila);
-                }
-
-            } catch (IOException ex) {
-                Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ResetModMonitoBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetModMonitoBotonActionPerformed
         MetNetworkInterface MON = new MetNetworkInterface();
         if (jTable1.getSelectedRows().length > 0) {
             //JOptionPane.showMessageDialog(jTable1, "No son molestos los popups? "+String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(),0)));
@@ -1563,48 +1583,21 @@ public class AWTGui extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-            jButton2ActionPerformed(evt); //llamamos la accion que regaliza este boton actualizar lista de interfaces
+            ReloadListBotonActionPerformed(evt); //llamamos la accion que regaliza este boton actualizar lista de interfaces
 
         }
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ResetModMonitoBotonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ReloadListBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReloadListBotonActionPerformed
         //Boton para escanear las Network Interfaces de nuestro pc.
-        Shell shell = new Shell();
-        MyNetworkInterfaces MYNETWORK = new MyNetworkInterfaces();
-        ArrayList<NetInterfaces> Interfaces = new ArrayList<>();
-        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
-        Object[] fila = new Object[modelo.getColumnCount()];
-        try {
+        //Shell shell = new Shell();
+       RecargarNetworksInterfaces();
 
-            while (modelo.getRowCount() > 0) {//Secuencia para limpiar jtable
-                for (int j = 0; j < modelo.getRowCount(); j++) {
-                    modelo.removeRow(j);
-                }
-            }
+    }//GEN-LAST:event_ReloadListBotonActionPerformed
 
-            Interfaces = MYNETWORK.Interfaces();
-            for (int i = 0; i < Interfaces.size(); i++) {
-
-                fila[0] = Interfaces.get(i).getESSID();
-                fila[1] = Interfaces.get(i).getMode();
-                fila[2] = Interfaces.get(i).getBSSID();
-                fila[3] = Interfaces.get(i).getDriver();
-                fila[4] = Interfaces.get(i).getChipset();
-                modelo.addRow(fila);
-
-            }
-
-        } catch (IOException ex) {
-            Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void StModeMonitorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StModeMonitorBotonActionPerformed
         // Boton modo monitor, si en la jTable1 se selecciona un casilla
         MetNetworkInterface MON = new MetNetworkInterface();
         if (jTable1.getSelectedRows().length > 0) {
@@ -1616,10 +1609,10 @@ public class AWTGui extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
-            jButton2ActionPerformed(evt); //llamamos la accion que regaliza el este boton
+            ReloadListBotonActionPerformed(evt); //llamamos la accion que regaliza el este boton
 
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_StModeMonitorBotonActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
@@ -1898,6 +1891,57 @@ public class AWTGui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        //Boton para escanear las Target Networks
+        ArrayList<targetNetwork> TargetNet = new ArrayList<>();
+        ColeccionTargetNetwork colecTN = new ColeccionTargetNetwork();
+        DefaultTableModel modelo2 = (DefaultTableModel) jTable2.getModel();
+        Object[] fila = new Object[modelo2.getColumnCount()];
+
+        if (jTable1.getSelectedRows().length > 0) {
+            String monInterface = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+            String time = jComboBox1.getSelectedItem().toString();
+            String channel = jComboBox2.getSelectedItem().toString();
+            try {
+                TargetNet = colecTN.scanTargets(monInterface, time, channel);
+                while (modelo2.getRowCount() > 0) {//Secuencia para limpiar jtable
+                    for (int j = 0; j < modelo2.getRowCount(); j++) {
+                        modelo2.removeRow(j);
+                    }
+                }
+
+                for (int i = 0; i < TargetNet.size(); i++) {
+
+                    fila[0] = TargetNet.get(i).getESSID();
+                    fila[1] = TargetNet.get(i).getBSSID();
+                    fila[2] = TargetNet.get(i).getChannel();
+                    fila[3] = TargetNet.get(i).getSpeed();
+                    fila[4] = TargetNet.get(i).getPower();
+                    fila[5] = TargetNet.get(i).getPrivacy();
+                    fila[6] = TargetNet.get(i).getCipher();
+                    fila[7] = TargetNet.get(i).getAuthentication();
+                    modelo2.addRow(fila);
+                }
+
+            } catch (IOException ex) {
+                Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1938,10 +1982,48 @@ public class AWTGui extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void RecargarNetworksInterfaces(){
+    //Boton para escanear las Network Interfaces de nuestro pc.
+        //Shell shell = new Shell();
+        MyNetworkInterfaces MYNETWORK = new MyNetworkInterfaces();
+        ArrayList<NetInterfaces> Interfaces = new ArrayList<>();
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        Object[] fila = new Object[modelo.getColumnCount()];
+        try {
+
+            while (modelo.getRowCount() > 0) {//Secuencia para limpiar jtable
+                for (int j = 0; j < modelo.getRowCount(); j++) {
+                    modelo.removeRow(j);
+                }
+            }
+
+            Interfaces = MYNETWORK.Interfaces();
+            for (int i = 0; i < Interfaces.size(); i++) {
+
+                fila[0] = Interfaces.get(i).getESSID();
+                fila[1] = Interfaces.get(i).getMode();
+                fila[2] = Interfaces.get(i).getBSSID();
+                fila[3] = Interfaces.get(i).getDriver();
+                fila[4] = Interfaces.get(i).getChipset();
+                modelo.addRow(fila);
+
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelPrincipal;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ReloadListBoton;
+    private javax.swing.JButton ResetModMonitoBoton;
+    private javax.swing.JButton StModeMonitorBoton;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1951,7 +2033,6 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -1961,7 +2042,6 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -1976,7 +2056,6 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -2024,9 +2103,7 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollBar jScrollBar2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
@@ -2041,7 +2118,6 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;

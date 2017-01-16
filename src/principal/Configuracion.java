@@ -72,22 +72,22 @@ public class Configuracion {
         return R;
     }
 
-    public boolean verProg() throws IOException {//Ver si los programas estan instalados
+    public boolean verProg() throws IOException {
         boolean R = false;
         String cmd[] = new String[4];
-        /*Array con los comandos para verificar si las herramientas se encuentran instaladas en nuestro pc*/
+       
 
         cmd[1] = "dpkg -l | grep aircrack-ng";
         cmd[2] = "dpkg -l | grep reaver";
         //cmd[3] = "dpkg -l | grep mkd3";
         cmd[3] = "dpkg -l | grep gnome-terminal";
 
-        for (int i = 0; i < cmd.length; i++) {// ciclo for para verificar si los programas se encuentran instalados.
-            //ejecutor, ejecuta el comando y retorna un ArrayList de String con el retorno de la ejecucion.
+        for (int i = 0; i < cmd.length; i++) {
+       
             if (ejecutor.EjVerProgramasInstalados(cmd) == null) {
                 R = false;
                 break;
-                /*    Si R=true se encuentran instalados los programas   */
+            
             } else {
 
                 R = true;
