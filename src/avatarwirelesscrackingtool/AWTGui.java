@@ -65,9 +65,9 @@ public class AWTGui extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        ScanTargetBoton = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        TablaTN = new javax.swing.JTable();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
@@ -78,7 +78,7 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jTabbedPane6 = new javax.swing.JTabbedPane();
         jPanel11 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        wepStarSniffingBoton = new javax.swing.JToggleButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
@@ -159,6 +159,7 @@ public class AWTGui extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Avatar Wireless Testing - MrRoox");
         setBackground(java.awt.Color.black);
+        setResizable(false);
 
         PanelPrincipal.setBackground(new java.awt.Color(1, 1, 1));
         PanelPrincipal.setBorder(null);
@@ -276,15 +277,15 @@ public class AWTGui extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(ResetModMonitoBoton))
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(176, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(180, 180, 180))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -304,23 +305,23 @@ public class AWTGui extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 178, 255));
         jLabel3.setText("List of Target Networks        ( WEP & WPA/ WPA2 )");
 
-        jButton5.setBackground(new java.awt.Color(255, 140, 0));
-        jButton5.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(1, 1, 1));
-        jButton5.setText("Scan Target Networks");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        ScanTargetBoton.setBackground(new java.awt.Color(255, 140, 0));
+        ScanTargetBoton.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        ScanTargetBoton.setForeground(new java.awt.Color(1, 1, 1));
+        ScanTargetBoton.setText("Scan Target Networks");
+        ScanTargetBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                ScanTargetBotonActionPerformed(evt);
             }
         });
 
-        jTable2.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        TablaTN.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        TablaTN.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ESSID", "BSSID", "CHANNEL", "Speed", "Power", "Privacy", "Cypher", "Authentication"
+                "ESSID", "BSSID", "CHANNEL", "Speed", "Power", "Privacy", "Cypher", "Auth"
             }
         ) {
             Class[] types = new Class [] {
@@ -338,17 +339,7 @@ public class AWTGui extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane8.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setHeaderValue("ESSID");
-            jTable2.getColumnModel().getColumn(1).setHeaderValue("BSSID");
-            jTable2.getColumnModel().getColumn(2).setHeaderValue("CHANNEL");
-            jTable2.getColumnModel().getColumn(3).setHeaderValue("Speed");
-            jTable2.getColumnModel().getColumn(4).setHeaderValue("Power");
-            jTable2.getColumnModel().getColumn(5).setHeaderValue("Privacy");
-            jTable2.getColumnModel().getColumn(6).setHeaderValue("Cypher");
-            jTable2.getColumnModel().getColumn(7).setHeaderValue("Authentication");
-        }
+        jScrollPane8.setViewportView(TablaTN);
 
         jComboBox1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3", "5", "10", "12", "14", "15", "16", "18", "20", "25", "30", " " }));
@@ -390,7 +381,7 @@ public class AWTGui extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5)
+                            .addComponent(ScanTargetBoton)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
@@ -415,7 +406,7 @@ public class AWTGui extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(ScanTargetBoton)
                 .addContainerGap(113, Short.MAX_VALUE))
         );
 
@@ -443,11 +434,11 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel11.setBorder(null);
         jPanel11.setPreferredSize(new java.awt.Dimension(1061, 216));
 
-        jToggleButton1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
-        jToggleButton1.setText("Start Sniffing and Logging");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        wepStarSniffingBoton.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
+        wepStarSniffingBoton.setText("Start Sniffing and Logging");
+        wepStarSniffingBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                wepStarSniffingBotonActionPerformed(evt);
             }
         });
 
@@ -477,7 +468,7 @@ public class AWTGui extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(wepStarSniffingBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -486,12 +477,12 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addComponent(jToggleButton1)
-                .addGap(42, 42, 42)
+                .addComponent(wepStarSniffingBoton)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("General Functionalities WEP", jPanel11);
@@ -1337,31 +1328,6 @@ public class AWTGui extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                    .addGap(6, 6, 6)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton8)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(jLabel9))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jCheckBox1))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addGap(271, 271, 271)
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButton4)))
-                    .addContainerGap(343, Short.MAX_VALUE)))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1373,6 +1339,29 @@ public class AWTGui extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton8)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jCheckBox1))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(271, 271, 271)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1401,7 +1390,7 @@ public class AWTGui extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("WPS", jPanel6);
@@ -1523,7 +1512,7 @@ public class AWTGui extends javax.swing.JFrame {
         ColeccionTargetNetwork CT = new ColeccionTargetNetwork();
         ArrayList<VictimClient> CV = new ArrayList<>();
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             CV = CT.OrdenarVictimClienMac();
 
             for (int i = 0; i < CV.size(); i++) {
@@ -1536,13 +1525,13 @@ public class AWTGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
                 String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));
-                String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));
-                String Essid = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
+                String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));
+                String Essid = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));
                 wepStart.PTestInjAP(Essid, Bssidvic, monitor);
 
             } catch (IOException ex) {
@@ -1553,15 +1542,15 @@ public class AWTGui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+    private void wepStarSniffingBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wepStarSniffingBotonActionPerformed
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
 
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
-            String Essid = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
-            String Channel = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essid = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));
+            String Channel = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 2));
             try {
                 wepStart.StartSniffinAndLoggind(Essid, Bssidvic, Channel, monitor);
 
@@ -1569,7 +1558,7 @@ public class AWTGui extends javax.swing.JFrame {
                 Logger.getLogger(AWTGui.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_wepStarSniffingBotonActionPerformed
 
     private void ResetModMonitoBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetModMonitoBotonActionPerformed
         MetNetworkInterface MON = new MetNetworkInterface();
@@ -1615,13 +1604,13 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));//Nuestra mac
-            String Essidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));//Nombre victima
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));//Nombre victima
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.CHopChop(Essidvic, Bssidvic, MiMAC, monitor);
@@ -1635,13 +1624,13 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Essidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.AssoWhApFakeAuth(monitor, Essidvic, Bssidvic, MiMAC);
@@ -1659,7 +1648,7 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
@@ -1680,13 +1669,13 @@ public class AWTGui extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         // 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
                 String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
                 String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-                String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 2));
+                String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 2));
 
                 wepStart.CreateArpInjPacketOnAccPoint(Bssidvic, MiMAC, monitor);
 
@@ -1700,7 +1689,7 @@ public class AWTGui extends javax.swing.JFrame {
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
@@ -1716,12 +1705,12 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.fragAttack(Bssidvic, MiMAC, monitor);
@@ -1736,11 +1725,11 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.CreathArpPackInjVAp(Bssidvic, MiMAC);
@@ -1756,7 +1745,7 @@ public class AWTGui extends javax.swing.JFrame {
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
@@ -1774,13 +1763,13 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Essidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC, monitor);
@@ -1794,12 +1783,12 @@ public class AWTGui extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.ARPrequestreplay(Bssidvic, MiMAC, monitor);
@@ -1814,13 +1803,13 @@ public class AWTGui extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
 
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             WEP wepStart = new WEP();
 
             String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
             String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-            String Essidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 0));
-            String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+            String Essidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 0));
+            String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
 
             try {
                 wepStart.AsociatewithAPusingfakeauth(Bssidvic, Essidvic, MiMAC, monitor);
@@ -1834,13 +1823,13 @@ public class AWTGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
                 String monitor = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 0));//Nuestra Tarjeta de Red en modo Monitor
                 String MiMAC = String.valueOf(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-                String Bssidvic = String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(), 1));//Direccion mac de la victima
+                String Bssidvic = String.valueOf(TablaTN.getValueAt(TablaTN.getSelectedRow(), 1));//Direccion mac de la victima
                 String n = jSpinner1.getName();
                 String m = jSpinner2.getName();
 
@@ -1858,7 +1847,7 @@ public class AWTGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        if (jTable1.getSelectedRows().length > 0 && jTable2.getSelectedRows().length > 0) {
+        if (jTable1.getSelectedRows().length > 0 && TablaTN.getSelectedRows().length > 0) {
             try {
                 WEP wepStart = new WEP();
 
@@ -1902,11 +1891,11 @@ public class AWTGui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void ScanTargetBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScanTargetBotonActionPerformed
         //Boton para escanear las Target Networks
         ArrayList<targetNetwork> TargetNet = new ArrayList<>();
         ColeccionTargetNetwork colecTN = new ColeccionTargetNetwork();
-        DefaultTableModel modelo2 = (DefaultTableModel) jTable2.getModel();
+        DefaultTableModel modelo2 = (DefaultTableModel) TablaTN.getModel();
         Object[] fila = new Object[modelo2.getColumnCount()];
 
         if (jTable1.getSelectedRows().length > 0) {
@@ -1939,7 +1928,7 @@ public class AWTGui extends javax.swing.JFrame {
             }
 
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_ScanTargetBotonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2022,7 +2011,9 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JPanel PanelPrincipal;
     private javax.swing.JButton ReloadListBoton;
     private javax.swing.JButton ResetModMonitoBoton;
+    private javax.swing.JButton ScanTargetBoton;
     private javax.swing.JButton StModeMonitorBoton;
+    private javax.swing.JTable TablaTN;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -2042,7 +2033,6 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -2115,14 +2105,13 @@ public class AWTGui extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton wepStarSniffingBoton;
     // End of variables declaration//GEN-END:variables
 }
