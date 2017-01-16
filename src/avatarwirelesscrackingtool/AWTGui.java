@@ -171,7 +171,6 @@ public class AWTGui extends javax.swing.JFrame {
 
         jTabbedPane1.setBackground(new java.awt.Color(1, 1, 1));
         jTabbedPane1.setBorder(null);
-        jTabbedPane1.setForeground(new java.awt.Color(1, 1, 1));
         jTabbedPane1.setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(1, 1, 1));
